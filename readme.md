@@ -20,3 +20,10 @@ var validationErrors = Clover.validate(rule, Object.fromEntries(data));
 console.log(validationErrors)
 
 ```
+
+## custom rule
+```js
+ var messages = {
+        "name.required": "The name must not be empty."
+    }
+```
