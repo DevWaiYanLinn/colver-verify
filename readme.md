@@ -15,7 +15,6 @@ var rule = {
 # Validate the data
 ```js
 var data = new FormData(e.target);
-var validationErrors = Clover.validate(rule, {});
 var validationErrors = Clover.validate(rule, Object.fromEntries(data));
 console.log(validationErrors)
 
