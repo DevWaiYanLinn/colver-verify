@@ -5,7 +5,8 @@ var Clover = {
             return val ? false : 'The ' + field + ' is required'
         },
         mail: function (field, val) {
-            return val.includes('@') ? false : 'The ' + field + ' does not match with mail format'
+            var regex =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            return val.match(regex) ? false : 'The ' + field + ' does not match with mail format'
         },
         password: function (field, val) {
             var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
